@@ -21,7 +21,7 @@ jobs:
         - name: running snyk scan
           uses: snyk/actions@0.4.0
           env:
-              snyk_token: $ {{ secrets.snyk_token }}
+              snyk_token: $ {{ secrets.SNYK_TOKEN }}
 
         - name: print hello
           run : echo hello
