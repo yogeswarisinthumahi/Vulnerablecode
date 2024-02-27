@@ -19,10 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: running snyk scan
-          run: snyk auth
           uses: snyk/actions@0.4.0
           env:
-              snyk_Token: $ {{ secrets.snyk_token }}
+              snyk_token: $ {{ secrets.snyk_token }}
 
         - name: print hello
           run : echo hello
