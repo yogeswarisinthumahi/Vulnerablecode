@@ -15,16 +15,24 @@ jobs:
 
         - name: print end of code
           run: echo *************
-  job2:
+  job3:
     runs-on: ubuntu-latest
     steps:
-        - name: running snyk scan
-          uses: snyk/actions@0.4.0
-          env:
-              SNYK_TOKEN: $ {{ secrets.SNYK_TOKEN }}
+     - name: Checkout
+       uses: actions/checkout@v4.1.7
+      
+    
+    
+  #job2:
+   # runs-on: ubuntu-latest
+   # steps:
+       # - name: running snyk scan
+         # uses: snyk/actions@0.4.0
+         # env:
+             # SNYK_TOKEN: $ {{ secrets.SNYK_TOKEN }}
 
-        - name: print hello
-          run : echo hello
+        #- name: print hello
+         # run : echo hello
         
     
     
